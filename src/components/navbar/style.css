@@ -1,0 +1,12 @@
+.NavbarContainer {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.Navbar {
+  width: 100%;
+  padding: 20px 40px;
+  background-color: var(--white-color);
+}
