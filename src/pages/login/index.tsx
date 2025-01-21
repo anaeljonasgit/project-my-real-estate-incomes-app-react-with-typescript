@@ -1,7 +1,9 @@
 import "./style.css";
 
+import LoginForm from "./LoginForm";
+
 const LoginPage = () => {
-  return <h1>LoginPage</h1>;
+  return <LoginForm />;
 };
 
 export default LoginPage;

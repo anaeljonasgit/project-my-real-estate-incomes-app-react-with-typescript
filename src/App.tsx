@@ -5,8 +5,8 @@ import { UserProvider } from "./contexts/user";
 import UnauthenticatedRoute from "./middlewares/unauthenticated";
 import AuthenticatedRoute from "./middlewares/authenticated";
 
-import LoginPage from "./pages/login";
-import DashboardPage from "./pages/dashboard";
+import LoginPage from "./pages/Login";
+import DashboardPage from "./pages/Dashboard";
 
 const App = () => {
   return (

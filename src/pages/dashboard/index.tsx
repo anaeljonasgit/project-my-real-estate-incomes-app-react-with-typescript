@@ -1,7 +1,11 @@
 import "./style.css";
 
+import { useUser } from "../../contexts/user";
+
 const DashboardPage = () => {
-  return <h1>DashboardPage</h1>;
+  const { setUser } = useUser();
+
+  return <h1 onClick={() => setUser(null)}>DashboardPage</h1>;
 };
 
 export default DashboardPage;

@@ -10,6 +10,7 @@
   --background-color: #f1f1fb;
 
   --grey-color: #abaecc;
+  --light-grey-color: #eee;
   --white-color: #ffffff;
 }
 
@@ -30,4 +31,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+input {
+  padding: 15px 30px;
+  border: 1px solid var(--light-grey-color);
+  font-size: 18px;
 }

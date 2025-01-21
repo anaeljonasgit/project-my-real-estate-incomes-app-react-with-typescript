@@ -1,0 +1,17 @@
+.MainButton button {
+  transition: 0.2s;
+  padding: 15px 30px;
+  border: none;
+  font-size: 20px;
+  color: var(--white-color);
+  background-color: var(--main-color);
+  cursor: pointer;
+}
+
+.MainButton button:hover {
+  opacity: 0.8;
+}
+
+.MainButton button:active {
+  opacity: 0.6;
+}
