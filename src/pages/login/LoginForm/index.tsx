@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import "./style.css";
@@ -18,13 +18,30 @@ const LoginForm = () => {
 
   const { setUser } = useUser();
 
+  let abortController: AbortController | null = null;
+
+  useEffect(() => {
+    console.log("Hello");
+
+    return () => {
+      if (abortController) {
+        abortController.abort();
+      }
+    };
+  }, []);
+
   const handleLoginSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+
+    abortController = new AbortController();
 
     if (!email || !password)
       return alert("Please, insert e-mail and password to continue.");
 
-    const user = await apiUsersService.login({ email, password });
+    const user = await apiUsersService.login(
+      { email, password },
+      abortController.signal
+    );
 
     if (user.email) {
       setUser({
