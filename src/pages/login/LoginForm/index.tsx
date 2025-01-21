@@ -21,8 +21,6 @@ const LoginForm = () => {
   let abortController: AbortController | null = null;
 
   useEffect(() => {
-    console.log("Hello");
-
     return () => {
       if (abortController) {
         abortController.abort();
